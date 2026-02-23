@@ -1037,6 +1037,8 @@ body._appear-modal .modal-win{
     display: none;
 }
 .select-modal-win__opener svg{
+    min-width: 1.25rem;
+    height: 0.833333125rem;
     margin-left: 0.625rem;
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
