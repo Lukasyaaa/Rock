@@ -1051,6 +1051,7 @@ body._appear-modal .modal-win{
     transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .select-modal-win__list{
+    overflow: hidden;
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.0625rem solid #242833;
