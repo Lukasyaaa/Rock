@@ -14,21 +14,37 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
         const headerLinks = document.querySelectorAll(".link-menu__inner");
-        headerLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                const target = document.querySelector(link.getAttribute('href'));
-                if (!target) return;
-
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - header.offsetHeight;
-
+        if(headerLinks.length > 0){
+            headerLinks[0].addEventListener("focus", () => {
+                header.classList.add("_active");
+                document.body.classList.add("_locked");
+            });
+            headerLinks[headerLinks.length - 1].addEventListener("blur", () => {
                 header.classList.remove("_active");
                 document.body.classList.remove("_locked");
-                window.scrollTo({top: offsetPosition, behavior: 'smooth'});
             });
-        });
+            headerLinks.forEach((link, i) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (!target) return;
+
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - header.offsetHeight;
+
+                    header.classList.remove("_active");
+                    document.body.classList.remove("_locked");
+                    window.scrollTo({top: offsetPosition, behavior: 'smooth'});
+                });
+                if(burger){
+                    burger.tabIndex = 1;
+                    if(window.innerWidth <= 480){
+                        link.tabIndex = i + 2;
+                    }
+                }
+            });
+        }
         makeScrolled();
         window.addEventListener("scroll", makeScrolled);
     }
@@ -88,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
         })
     }
-
     
     const modalButtons = document.querySelectorAll(".open-modal");
 

@@ -255,29 +255,47 @@ main{
     .header__burger::after{
         top: 0;
         transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
-        top 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        top 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+        background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     .header__burger span{
         top: 50%;
         transform: translateY(-50%);
-        transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+        background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     .header__burger::before{
         bottom: 0;
         transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
-        bottom 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        bottom 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+        background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
-    .header._active .header__burger span{
+    .header._active .header__burger span,
+    .header__burger:hover span,
+    .header__burger:focus span{
         transform: scale(0) translateY(-50%);
     }
-    .header._active .header__burger::after{
+    .header._active .header__burger::after,
+    .header__burger:hover::after,
+    .header__burger:focus::after{
         transform: rotate(45deg) translateY(-50%);
         top: 50%;
     }
-    .header._active .header__burger::before{
+    .header._active .header__burger::before,
+    .header__burger:hover::before,
+    .header__burger:focus::before{
         transform: rotate(-45deg) translateY(50%);
         bottom: 50%;
+    }
+
+    .header__burger:hover span,
+    .header__burger:hover::after,
+    .header__burger:hover::before,
+    .header__burger:focus span,
+    .header__burger:focus::after,
+    .header__burger:focus::before{
+        background-color: #F82C56;
     }
 }
 
