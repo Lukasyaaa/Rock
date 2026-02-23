@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".header__burger");
     const header = document.querySelector(".header");
+    const headerLinks = document.querySelectorAll(".link-menu__inner");
     if(header){
         const makeScrolled = () => {
             if(window.pageYOffset > 0) header.classList.add("_scroll");
@@ -13,15 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.classList.toggle("_locked");
             });
         }
-        const headerLinks = document.querySelectorAll(".link-menu__inner");
         if(headerLinks.length > 0){
             headerLinks[0].addEventListener("focus", () => {
                 header.classList.add("_active");
                 document.body.classList.add("_locked");
             });
-            headerLinks[headerLinks.length - 1].addEventListener("blur", () => {
-                header.classList.remove("_active");
-                document.body.classList.remove("_locked");
+            headerLinks[headerLinks.length - 1].addEventListener("keydown", (e) => {
+                if(e.key === "Tab"){
+                    header.classList.remove("_active");
+                    document.body.classList.remove("_locked");
+                }
             });
             headerLinks.forEach((link, i) => {
                 link.addEventListener('click', (e) => {
@@ -129,7 +131,19 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("_locked");
         document.body.classList.remove("_appear-modal");
         insideActive.forEach(el => el.tabIndex = -1);
-        outsideActive.forEach(el => el.tabIndex = 0);
+        outsideActive.forEach(el => {
+            if(window.innerWidth <= 480 && headerLinks.length > 0){
+                if(el.classList.contains("header__burger")){
+                    el.tabIndex = 1;
+                    return;
+                }
+                if(el.classList.contains("link-menu__inner")){
+                    el.tabIndex = 2 + [...headerLinks].indexOf(el);
+                    return;
+                }
+            }
+            el.tabIndex = 0;
+        });
 
         if(modalInput) modalInput.value = 1
         if(modalSelectOpenerValue) modalSelectOpenerValue.innerHTML = ""
@@ -186,9 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 modalSelect.classList.add("_active");
                 modalSelectContainer.style.height = modalSelectList.offsetHeight + "px";
             });
-            modalSelectLinks[modalSelectLinks.length - 1].addEventListener("blur", () => {
-                modalSelect.classList.remove("_active");
-                modalSelectContainer.style.height = "";
+            modalSelectLinks[modalSelectLinks.length - 1].addEventListener("keydown", (e) => {
+                if(e.key === "Tab"){
+                    modalSelect.classList.remove("_active");
+                    modalSelectContainer.style.height = "";
+                }
             });
         }
     }
@@ -205,7 +221,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if(modalCloser){
-        modalCloser.addEventListener("click", closeModalWin);
+        modalCloser.addEventListener("click", () => {
+            closeModalWin();
+            if(modalError) modalError.innerHTML = "";
+        });
         modalCloser.addEventListener("focus", () => {
             document.body.classList.add("_locked");
             document.body.classList.add("_appear-modal");
@@ -226,6 +245,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
             closeModalWin();
         });
-        modalConfirm.addEventListener("blur", closeModalWin);
+        modalConfirm.addEventListener("keydown", (e) => {
+            if(e.key === "Tab"){
+                closeModalWin();
+            }
+        });
+    }
+
+    const supportsWebP = () => {
+        try {
+            const canvas = document.createElement('canvas');
+            if (!!(canvas.getContext && canvas.getContext('2d'))) {
+                return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            } else return false;
+        } catch (e) { return false; }
+    }
+
+    if (supportsWebP()) {
+        document.body.classList.add('webp');
     }
 });

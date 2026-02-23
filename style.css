@@ -301,7 +301,7 @@ main{
 
 /*----------INTRO----------*/
 .intro{
-    background: url("./img/intro/banner.jpg");
+    background-image: url("./img/intro/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -310,6 +310,9 @@ main{
     display: flex;
     align-items: center;
     padding: 2.8125rem 0;
+}
+body.webp .intro{
+    background-image: url("./img/intro/banner.webp");
 }
 @media (max-width: 62em) {
     .intro{
@@ -347,7 +350,7 @@ main{
     text-shadow: 0 0 5px #000;
     font-weight: 400;
     font-size: 1.25rem;
-    color: #C8CACB;
+    color: #fff;
 
     margin: 1.875rem 0;
 }
@@ -372,7 +375,7 @@ main{
     text-shadow: 0 0 5px #000;
     font-weight: 400;
     font-size: 0.875rem;
-    color: #C8CACB;
+    color: #fff;
 }
 .intro__info p em{
     color: #55B4D3;
@@ -933,7 +936,7 @@ body::after{
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .modal-win{
-    width: 48rem;
+    width: 46.125rem;
 
     border-radius: 1rem;
     background-color: #151821;
@@ -945,6 +948,11 @@ body::after{
     top: 50%;
     transform: translateY(-50%) translateX(-50%) scale(0);
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media (max-width: 48em) {
+    .modal-win{
+        width: calc(100% - 15px*2);
+    }
 }
 body._appear-modal::after{
     transform: scale(1);
@@ -990,6 +998,11 @@ body._appear-modal .modal-win{
     font-weight: 700;
     font-size: 2rem;
     color: #fff;
+}
+@media (max-width: 62em) {
+    .select-modal-win__opener button{
+        font-size: 1.75rem;
+    }
 }
 .select-modal-win__opener button:not(:disabled){
     display: flex;
@@ -1046,12 +1059,22 @@ body._appear-modal .modal-win{
 .modal-win__field{
     margin: 0.625rem 0 2rem;
 }
+@media (max-width: 62em) {
+    .modal-win__field{
+        margin: 0.625rem 0 1.5rem;
+    }
+}
 
 .field-modal-win__subinput{
     font-weight: 500;
     font-size: 1.25rem;
     color: #fff;
     margin-bottom: 0.25rem;
+}
+@media (max-width: 62em) {
+    .field-modal-win__subinput{
+        font-size: 1rem;
+    }
 }
 .field-modal-win__input{
     padding-left: 0.625rem;
@@ -1076,4 +1099,9 @@ body._appear-modal .modal-win{
     font-size: 1.5rem;
     font-weight: 700;
     width: 100%;
+}
+@media (max-width: 62em) {
+    .modal-win__confirm{
+        font-size: 1.25rem;
+    }
 }
