@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Рок гурт - Грим та Грім</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container_header">
+            <div class="header__logo">G&G</div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__link link-menu">
+                        <a class="link-menu__inner" href="#history"><span>Про гурт</span></a>
+                    </li>
+                    <li class="menu__link link-menu">
+                        <a class="link-menu__inner" href="#schedule"><span>Концерти</span></a>
+                    </li>
+                    <li class="menu__link link-menu">
+                        <a class="link-menu__inner" href="#group"><span>Галерея</span></a>
+                    </li>
+                    <li class="menu__link link-menu">
+                        <a class="link-menu__inner" href="#contacts"><span>Контакти</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__burger" type="button"><span></span></button>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1 class="intro__heading">Гурт «Грим та Грім»</h1>
+                <div class="intro__subheading">Справжній український рок, який гуркоче в серці.</div>
+                <div class="intro__info">
+                    <p>«Грим та Грім» - це поєднання <em>потужних</em> гітарних рифів, чесних текстів і вибухової енергії сцени. Ми граємо для тих, хто цінує живий звук, свободу та силу музики.</p>
+                    <p><em>Наші концерти</em> - це завжди контакт з залом, драйв і емоції. Приєднуйтеся до нас на найближчих виступах і відчуй цей саунд наживо!</p>
+                </div>
+                <button class="intro__order open-modal" data-opener="select" type="button">Замовити квиток</button>
+            </div>
+        </section>
+        <section class="schedule" id="schedule">
+            <div class="container">
+                <div class="schedule__container">
+                    <table class="schedule__table">
+                        <caption class="schedule__title">Найближчі концерти</caption>
+                        <thead class="schedule__head">
+                            <tr class="schedule__row">
+                                <th class="schedule__cell">Місто / Заклад</th>
+                                <th class="schedule__cell">К-сть місць</th>
+                                <th class="schedule__cell">Дата і час</th>
+                                <th class="schedule__cell"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="schedule__body">
+                            <tr class="schedule__row">
+                                <td class="schedule__cell">Київ / Docker-G Pub</td>
+                                <td class="schedule__cell">250</td>
+                                <td class="schedule__cell">
+                                    <time datetime="2025-10-25T19:00">25.10.2025, 19:00</time>
+                                </td>
+                                <td class="schedule__cell cell-schedule">
+                                    <button class="cell-schedule__button button_red open-modal" data-opener="kyiv" type="button">
+                                        <span>Замовити Квиток</span>
+                                        <svg width="32px" height="32px" viewBox="0 -3.5 39 39" fill="#fff">
+                                            <path d="M39 19.438v5.562c0 1.104-0.896 2-2 2h-35c-1.104 0-2-0.896-2-2v-5.5c1.657 0 3-1.344 3-3 0-1.657-1.343-3-3-3v-5.5c0-1.104 0.896-2 2-2h35c1.104 0 2 0.896 2 2v5.438c-1.657 0-3 1.343-3 3 0 1.656 1.343 3 3 3zM34 11c0-1.104-0.896-2-2-2h-25c-1.104 0-2 0.896-2 2v11c0 1.104 0.896 2 2 2h25c1.104 0 2-0.896 2-2v-11zM32 23h-25c-0.553 0-1-0.448-1-1v-11c0-0.553 0.447-1 1-1h25c0.552 0 1 0.447 1 1v11c0 0.552-0.448 1-1 1zM12.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM20.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM28.47 15.538l-0.907-2.58-0.907 2.58-2.613 0.11 2.053 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111z"></path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="schedule__row">
+                                <td class="schedule__cell">Львів / !FESTrepublic</td>
+                                <td class="schedule__cell">400</td>
+                                <td class="schedule__cell">
+                                    <time datetime="2025-11-01T20:00">01.11.2025, 20:00</time>
+                                </td>
+                                <td class="schedule__cell cell-schedule">
+                                    <button class="cell-schedule__button button_red open-modal" data-opener="lviv" type="button">
+                                        <span>Замовити Квиток</span>
+                                        <svg width="32px" height="32px" viewBox="0 -3.5 39 39" fill="#fff">
+                                            <path d="M39 19.438v5.562c0 1.104-0.896 2-2 2h-35c-1.104 0-2-0.896-2-2v-5.5c1.657 0 3-1.344 3-3 0-1.657-1.343-3-3-3v-5.5c0-1.104 0.896-2 2-2h35c1.104 0 2 0.896 2 2v5.438c-1.657 0-3 1.343-3 3 0 1.656 1.343 3 3 3zM34 11c0-1.104-0.896-2-2-2h-25c-1.104 0-2 0.896-2 2v11c0 1.104 0.896 2 2 2h25c1.104 0 2-0.896 2-2v-11zM32 23h-25c-0.553 0-1-0.448-1-1v-11c0-0.553 0.447-1 1-1h25c0.552 0 1 0.447 1 1v11c0 0.552-0.448 1-1 1zM12.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM20.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM28.47 15.538l-0.907-2.58-0.907 2.58-2.613 0.11 2.053 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111z"></path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="schedule__row">
+                                <td class="schedule__cell">Одеса / Зелен театр</td>
+                                <td class="schedule__cell">700</td>
+                                <td class="schedule__cell">
+                                    <time datetime="2025-11-09T19:30">09.11.2025, 19:30</time>
+                                </td>
+                                <td class="schedule__cell cell-schedule">
+                                    <button class="cell-schedule__button button_red open-modal" data-opener="odesa" type="button">
+                                        <span>Замовити Квиток</span>
+                                        <svg width="32px" height="32px" viewBox="0 -3.5 39 39" fill="#fff">
+                                            <path d="M39 19.438v5.562c0 1.104-0.896 2-2 2h-35c-1.104 0-2-0.896-2-2v-5.5c1.657 0 3-1.344 3-3 0-1.657-1.343-3-3-3v-5.5c0-1.104 0.896-2 2-2h35c1.104 0 2 0.896 2 2v5.438c-1.657 0-3 1.343-3 3 0 1.656 1.343 3 3 3zM34 11c0-1.104-0.896-2-2-2h-25c-1.104 0-2 0.896-2 2v11c0 1.104 0.896 2 2 2h25c1.104 0 2-0.896 2-2v-11zM32 23h-25c-0.553 0-1-0.448-1-1v-11c0-0.553 0.447-1 1-1h25c0.552 0 1 0.447 1 1v11c0 0.552-0.448 1-1 1zM12.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM20.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM28.47 15.538l-0.907-2.58-0.907 2.58-2.613 0.11 2.053 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111z"></path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="schedule__row">
+                                <td class="schedule__cell">Харків / ArtZavod</td>
+                                <td class="schedule__cell">500</td>
+                                <td class="schedule__cell">
+                                    <time datetime="2025-11-16T19:00">16.11.2025, 19:00</time>
+                                </td>
+                                <td class="schedule__cell cell-schedule">
+                                    <button class="cell-schedule__button button_red open-modal" data-opener="kharkiv" type="button">
+                                        <span>Замовити Квиток</span>
+                                        <svg width="32px" height="32px" viewBox="0 -3.5 39 39" fill="#fff">
+                                            <path d="M39 19.438v5.562c0 1.104-0.896 2-2 2h-35c-1.104 0-2-0.896-2-2v-5.5c1.657 0 3-1.344 3-3 0-1.657-1.343-3-3-3v-5.5c0-1.104 0.896-2 2-2h35c1.104 0 2 0.896 2 2v5.438c-1.657 0-3 1.343-3 3 0 1.656 1.343 3 3 3zM34 11c0-1.104-0.896-2-2-2h-25c-1.104 0-2 0.896-2 2v11c0 1.104 0.896 2 2 2h25c1.104 0 2-0.896 2-2v-11zM32 23h-25c-0.553 0-1-0.448-1-1v-11c0-0.553 0.447-1 1-1h25c0.552 0 1 0.447 1 1v11c0 0.552-0.448 1-1 1zM12.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM20.47 15.538l-0.907-2.58-0.907 2.58-2.614 0.11 2.054 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111zM28.47 15.538l-0.907-2.58-0.907 2.58-2.613 0.11 2.053 1.704-0.709 2.648 2.176-1.526 2.175 1.526-0.708-2.647 2.053-1.704-2.613-0.111z"></path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="group" id="group">
+            <div class="container">
+                <h2 class="group__heading">Учасники гурту</h2>
+                <div class="group__items">
+                    <div class="group__item item-group">
+                        <picture class="item-group__image">
+                            <source srcset="./img/group/maks/maks.webp" type="image/webp">
+                            <img src="./img/group/maks/maks.jpg" alt="Гітарист Maксим">
+                        </picture>
+                        <h3 class="item-group__name">Максим - гітара</h3>
+                    </div>
+                    <div class="group__item item-group">
+                        <picture class="item-group__image">
+                            <source srcset="./img/group/elena/elena.webp" type="image/webp">
+                            <img src="./img/group/elena/elena.jpg" alt="Вокалістка Олена">
+                        </picture>
+                        <h3 class="item-group__name">Олена - вокал</h3>
+                    </div>
+                    <div class="group__item item-group">
+                        <picture class="item-group__image">
+                            <source srcset="./img/group/taras/taras.webp" type="image/webp">
+                            <img src="./img/group/taras/taras.jpg" alt="Барабанщик Тарас">
+                        </picture>
+                        <h3 class="item-group__name">Тарас - барабани</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="history" id="history">
+            <div class="container">
+                <h2 class="history__heading">Наша історія</h2>
+                <div class="history__info">
+                    <picture class="history__image">
+                        <source srcset="./img/history/peoples.webp" type="image/webp">
+                        <img src="./img/history/peoples.jpg" alt="Наш Концерт">
+                    </picture>
+                    <p>«Грим та Грім» народився з бажання створювати музику, яка відчувається серцем. Ми почали свій шлях у маленькій студії в центрі Києва, де кожен акорд, кожне слово було наповнене емоціями та переживаннями. Це було місце, де народжувались наші перші пісні, де ми вчились грати разом, як єдиний організм.</p>
+                    <p>За роки нашої діяльності ми виступили на десятках сцен, від невеликих клубів до великих фестивалів. Наша музика - це поєднання традиційного року з сучасними елементами, що робить її унікальною та впізнаваною. Ми не боїмось експериментувати з звуком, додаючи електронні елементи або народні інструменти.</p>
+                    <p>Кожен наш виступ - це не просто концерт, а справжня подія, де ми ділимося своєю енергією з глядачами та створюємо неповторну атмосферу. Ми віримо, що музика здатна обʼєднувати людей, створювати спільноти та надихати на зміни.</p>
+                    <p>Наш колектив складається з досвідчених музикантів, кожен з яких привносить свій унікальний стиль та бачення. Максим створює неймовірні гітарні рифи, Олена зачаровує своїм вокалом, а Тарас тримає ритм, який змушує серце битися в унісон з музикою.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contacts">
+            <div class="container">
+                <h2 class="contact__heading">Звʼяжись з нами</h2>
+                <div class="contact__subheading">Хочеш заказати виступ або маєш питання? Пиши!</div>
+                <div class="contact__row">
+                    <form class="contact__form" action="#">
+                        <div class="contact__fields">
+                            <div class="contact__field field-contact">
+                                <label class="field-contact__subinput" for="your_name">Імʼя</label>
+                                <input class="field-contact__input" type="text" id="your_name" required>
+                                <span class="field-contact__error error"></span>
+                            </div>
+                            <div class="contact__field field-contact">
+                                <label class="field-contact__subinput" for="your_email">Email</label>
+                                <input class="field-contact__input" type="email" id="your_email" required>
+                                <span class="field-contact__error error"></span>
+                            </div>
+                        </div>
+                        <div class="contact__textarea textarea-contact">
+                            <label class="textarea-contact__subinput" for="your_message">Повідомлення</label>
+                            <textarea class="textarea-contact__input" id="your_message" placeholder="Розкажи про свої ідеї..." required></textarea>
+                            <span class="textarea-contact__error error"></span>
+                        </div>
+                        <button class="contact__send button_red">Відправити</button>
+                    </form>
+                    <address class="contact__location location-contact">
+                        <h3 class="location-contact__title">Наше місцезнаходження</h3>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2543.121851229535!2d30.53329265200403!3d50.401566673537346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1771734425145!5m2!1suk!2sua"
+                            width="100%" height="250" 
+                            style="border:0;border-radius:8px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Місцезнаходження"
+                        >
+                        </iframe>
+                    </address>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__copyright">© 2025 «Грим та Грім». Всі права захищені.</div>
+                <ul class="footer__socials">
+                    <li class="footer__social social-footer">
+                        <a class="social-footer__inner" href="#"><span>Instagram</span></a>
+                    </li>
+                    <li class="footer__social social-footer">
+                        <a class="social-footer__inner" href="#"><span>YouTube</span></a>
+                    </li>
+                    <li class="footer__social social-footer">
+                        <a class="social-footer__inner" href="#"><span>Facebook</span></a>
+                    </li>
+                </ul>
+            </div>
+            <address class="footer__author author-footer">
+                <a class="author-footer__email" href="mailto:booking@lotoplay">
+                    <span>booking@lotoplay</span>
+                </a>
+                <a class="author-footer__phone" href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </address>
+        </div>
+    </footer>
+    <div class="modal-win">
+        <button class="modal-win__closer" type="button" tabindex="-1"></button>
+        <div class="modal-win__select select-modal-win">
+            <h2 class="select-modal-win__opener">
+                <button type="button" tabindex="-1">
+                    <span>Замовлення квитка/ів на <em></em></span>
+                    <svg fill="#fff" width="20" height="13.33333" viewBox="0 0 72 48">
+                        <path
+                            d="m 69.845853,1.3882316 a 6.0237558,6.0236422 0 0 0 -8.449798,0.767568 L 36.000963,32.624996 10.605571,2.1562986 A 5.9988917,5.9987786 0 1 0 1.3943918,9.8438696 L 31.395374,45.84393 a 5.9967564,5.9966433 0 0 0 9.211179,0 L 70.607534,9.8433696 a 6.0074562,6.0073429 0 0 0 -0.761681,-8.455138 z"
+                            style="stroke-width:1" 
+                        />
+                    </svg>
+                </button>
+            </h2>
+            <div class="select-modal-win__container">
+                <ul class="select-modal-win__list">
+                    <li class="select-modal-win__link"><button type="button" tabindex="-1">Київ / Docker-G Pub</button></li>
+                    <li class="select-modal-win__link"><button type="button" tabindex="-1">Львів / !FESTrepublic</button></li>
+                    <li class="select-modal-win__link"><button type="button" tabindex="-1">Одеса / Зелен театр</button></li>
+                    <li class="select-modal-win__link"><button type="button" tabindex="-1">Харків / ArtZavod</button></li>
+                </ul>
+            </div>
+            <div class="modal-win__field field-modal-win">
+                <label class="field-modal-win__subinput" for="count">Введіть к-сть Квитків</label>
+                <input class="field-modal-win__input" id="count" type="number" value="1" tabindex="-1" required>
+                <span class="field-modal-win__error error"></span>
+            </div>
+            <button type="button" class="modal-win__confirm button_red" tabindex="-1">Підтвердити Замовлення</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

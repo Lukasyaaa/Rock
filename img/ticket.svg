@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="800"
+   height="430"
+   viewBox="0 -3.5 39 20.9625"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ticket.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="false"
+     inkscape:zoom="1.03625"
+     inkscape:cx="399.51749"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">ticket2</title>
+  <path
+     d="m 39,9.914004 v 5.552067 C 39,16.5681 38.104,17.4625 37,17.4625 H 2 c -1.104,0 -2,-0.8944 -2,-1.996429 V 9.975893 c 1.657,0 3,-1.3416 3,-2.994643 C 3,5.327209 1.657,3.986607 0,3.986607 V -1.5035714 C 0,-2.6056 0.896,-3.5 2,-3.5 h 35 c 1.104,0 2,0.8944 2,1.9964286 V 3.924718 c -1.657,0 -3,1.340602 -3,2.994643 0,1.653043 1.343,2.994643 3,2.994643 z M 34,1.491071 C 34,0.3890429 33.104,-0.5053571 32,-0.5053571 H 7 c -1.104,0 -2,0.8944 -2,1.9964281 v 10.980358 c 0,1.102028 0.896,1.996428 2,1.996428 h 25 c 1.104,0 2,-0.8944 2,-1.996428 z M 32,13.469643 H 7 c -0.553,0 -1,-0.4472 -1,-0.998214 V 1.491071 C 6,0.939059 6.447,0.4928571 7,0.4928571 h 25 c 0.552,0 1,0.4462019 1,0.9982139 v 10.980358 c 0,0.551014 -0.448,0.998214 -1,0.998214 z M 12.47,6.020968 11.563,3.445575 10.656,6.020968 8.042,6.130771 10.096,7.831729 9.387,10.475 11.563,8.951725 13.738,10.475 13.03,7.832727 15.083,6.13177 Z m 8,0 L 19.563,3.445575 18.656,6.020968 16.042,6.130771 18.096,7.831729 17.387,10.475 19.563,8.951725 21.738,10.475 21.03,7.832727 23.083,6.13177 Z m 8,0 L 27.563,3.445575 26.656,6.020968 24.043,6.130771 26.096,7.831729 25.387,10.475 27.563,8.951725 29.738,10.475 29.03,7.832727 31.083,6.13177 Z"
+     id="path1"
+     style="stroke-width:0.999107" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>ticket2</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
